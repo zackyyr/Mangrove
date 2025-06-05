@@ -29,17 +29,47 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return <>
-  <div className={styles.container}>
-    <Navbar />
-    <Hero />
-    <About />
-    <Team />
-    <Explore />
-    <News />
-    <Community />
-    <CTA />
-    <Footer />
-  </div>
+<Head>
+        {/* SEO: Title */}
+        <title>Mangrove Guardians - Save Our Coasts with Nature</title>
+
+        {/* SEO: Meta Description */}
+        <meta name="description" content="Join the movement to protect and restore mangrove forests. Discover how we combine eco-tourism, education, and community efforts to safeguard our coasts and fight climate change." />
+
+        {/* SEO: Keywords (opsional, tidak lagi terlalu penting) */}
+        <meta name="keywords" content="mangrove, conservation, eco-tourism, coastal protection, environment, climate action, education" />
+
+        {/* SEO: Canonical */}
+        <link rel="canonical" href="https://www.mangroveguardians.org/" />
+
+        {/* Open Graph (Social Media) */}
+        <meta property="og:title" content="Mangrove Guardians - Save Our Coasts with Nature" />
+        <meta property="og:description" content="Join the movement to protect and restore mangrove forests." />
+        <meta property="og:image" content="https://www.mangroveguardians.org/og-image.jpg" />
+        <meta property="og:url" content="https://www.mangroveguardians.org/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mangrove Guardians - Save Our Coasts with Nature" />
+        <meta name="twitter:description" content="Join the movement to protect and restore mangrove forests." />
+        <meta name="twitter:image" content="https://www.mangroveguardians.org/og-image.jpg" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main>
+            <Navbar />
+            <Hero />
+            <About />
+            <Team />
+            <Explore />
+            <News />
+            <Community />
+            <CTA />
+            <Footer />
+      </main>
+
     
   </>
 }

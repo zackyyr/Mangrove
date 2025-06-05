@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from '@/styles/sections/Hero.module.css'
 
 const hero = () => {
   return (
-    <div>hero</div>
+    <div>angjay</div>
   )
 }
 

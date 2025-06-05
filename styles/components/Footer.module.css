@@ -1,0 +1,241 @@
+.footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 60px 20px 30px;
+  font-size: 16px;
+  color: #374151;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+/* Membuat section contacts lebih lebar */
+.contacts {
+  grid-column: span 2;
+  min-width: 280px;
+}
+
+/* Membungkus email panjang */
+.contacts p {
+  word-break: break-word;
+}
+
+
+.footerSection h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+  width: 500px;
+}
+
+.footerSection p,
+.footerSection ul li {
+  margin-bottom: 10px;
+}
+
+.footerSection i {
+  margin-right: 8px;
+  color: #025043;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerSection ul li a {
+  text-decoration: none;
+  color: #4b5563;
+  transition: color 0.2s ease;
+}
+
+.footerSection ul li a:hover {
+  color: #025043;
+  text-decoration: underline;
+}
+
+/* Newsletter */
+.newsletterForm {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+.newsletterForm input {
+  flex: 1 1 250px;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.newsletterForm input:focus {
+  border-color: #025043;
+  box-shadow: 0 0 8px rgba(2, 80, 67, 0.5);
+  outline: none;
+}
+
+.newsletterForm button {
+  background-color: #025043;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletterForm button:hover {
+  background-color: rgb(2, 100, 69);
+}
+.newsletter h4 { 
+    font-size: 35px;
+}
+.newsletter p { 
+    width: 400px;
+    line-height: 1.5;
+    font-size: 19px;
+}
+/* Social Icons */
+.socialIcons {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcons a {
+  font-size: 18px;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.socialIcons a:hover {
+  color: rgb(8, 111, 77);
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Small devices (smartphone, max-width: 600px) */
+@media (max-width: 600px) {
+  .footerContainer {
+    flex-wrap: nowrap;
+    grid-template-columns: 1fr;
+    
+    gap: 24px;
+  }
+  .footerSection { 
+    text-align: center;
+  }
+/* Contacts section jadi full width */
+.contacts {
+    grid-column: auto;
+    min-width: auto;
+  }
+
+  .footerSection h4 {
+    width: auto;
+    font-size: 22px;
+  }
+
+  .newsletterForm {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .newsletterForm input,
+  .newsletterForm button {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .newsletter p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+/* Medium devices (tablet, 601px - 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .footerContainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .contacts {
+    grid-column: span 2;
+    min-width: auto;
+  }
+
+  .footerSection h4 {
+    width: auto;
+  }
+
+  .newsletterForm {
+    width: 100%;
+  }
+
+  .newsletterForm input {
+    flex: 1 1 60%;
+  }
+
+  .newsletterForm button {
+    flex: 1 1 35%;
+  }
+
+  .newsletter p {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+/* Large devices (desktop, min-width: 901px) */
+@media (min-width: 901px) {
+  .footerContainer {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+  }
+
+  .contacts {
+    grid-column: span 2;
+    min-width: 280px;
+  }
+
+  .footerSection h4 {
+    width: 500px;
+  }
+
+  .newsletterForm {
+    width: 500px;
+  }
+
+  .newsletterForm input {
+    flex: 1 1 250px;
+  }
+
+  .newsletterForm button {
+    flex: 0 0 auto;
+  }
+
+  .newsletter p {
+    width: 400px;
+    font-size: 19px;
+  }
+}
