@@ -1,0 +1,25 @@
+.primaryBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.primaryBtn.default {
+  background-color: #FAEC6B;
+  color: #000;
+}
+
+.primaryBtn.default:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Hover using CSS variables */
+.primaryBtn:hover {
+  background-color: var(--hover-bg);
+  color: var(--hover-color);
+}

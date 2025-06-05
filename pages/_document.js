@@ -1,13 +1,16 @@
-import { Html, Head, Main, NextScript } from "next/document";
+// pages/_document.jsx
+import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">
-      <Head />
+    <Html>
+      <Head>
+        {/* Tambahkan font dari Google Fonts */}
+      </Head>
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }

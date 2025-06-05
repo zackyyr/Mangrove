@@ -1,0 +1,131 @@
+.container {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Tambahkan class .sticky dari komponen jika perlu pakai scroll listener */
+.sticky {
+  position: fixed;
+  top: 0;
+  background: hsl(170, 95%, 16%);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(55px); /* Safari support */
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.118);
+}
+.navbar {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1D5C63;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.links li a:hover {
+  color: #1D5C63;
+}
+.cta { 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hamburger { 
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+.hamburger i { 
+    font-size: 20px;
+}
+
+/* Warna default link */
+.links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Hover default */
+.links li a:hover {
+  color: #1D5C63;
+}
+
+/* Saat sticky navbar aktif */
+.stickyNavbar .links li a {
+  color: white;
+}
+
+.stickyNavbar .links li a:hover {
+  color: #FAEC6B;
+}
+
+
+@media (max-width: 954px) {
+    .navbar { 
+        padding: 20px 60px;
+        z-index: 5;
+    }
+    .hamburger { 
+        display: flex;
+    } 
+    .links ul { 
+        display: none;
+        z-index: 5;
+        flex-direction: column;
+        position: absolute;
+        right: 7%;
+        top: 80%;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
+        text-align: center;
+        padding: 30px 50px;
+        gap: 30px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+  .stickyNavbar .links li a {
+    color: black !important; /* 🚨 override pakai !important agar menang dari .stickyNavbar */
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .links.showMenu ul {
+    display: flex;
+  }
+  .cta { 
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 786px) {
+      .navbar { 
+        padding: 20px 30px;
+    }
+    .links li a { 
+      font-size: 12px;
+    }
+}
