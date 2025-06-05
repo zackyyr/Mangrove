@@ -6,6 +6,11 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
+  display: flex; /* dari inline-flex jadi flex */
+  align-items: center;
+  justify-content: space-between; /* <== ini bikin teks kiri, arrow kanan */
+  gap: 12px;
+  text-align: left;
 }
 
 .primaryBtn.default {
@@ -23,3 +28,39 @@
   background-color: var(--hover-bg);
   color: var(--hover-color);
 }
+
+.arrowBox {
+  background-color: #000;
+  width: 36px;      /* ukuran kotak tetap */
+  height: 36px;     /* ukuran kotak tetap */
+  color: white;
+  border-radius: 100px;
+  user-select: none;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+/* Panah didalam span supaya bisa dianimasikan */
+.arrowBox span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Saat hover, panah geser ke kanan */
+.arrowBox:hover span {
+  transform: translateX(5px);
+}
+
+/* Opsional: background box berubah warna saat hover */
+.arrowBox:hover {
+  background-color: #FAEC6B;
+  color: black;
+}
+
+

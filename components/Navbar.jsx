@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className={`${styles.navbar} ${isSticky ? styles.stickyNavbar : ''}`}>
         <div className={styles.logo}>
            <a href=""><Image 
-              src={isSticky ? "/LogoPrimary.svg" : "/LogoBlack.svg"} 
+              src={isSticky ? "/LogoPrimary.svg" : "/LogoWhite.svg"} 
               alt="Mangrove Logo" 
               width={140} 
               height={40} 
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
 
         <div className={styles.cta}>
-           <PrimaryBtn>Get Started</PrimaryBtn>
+           <PrimaryBtn fontSize='15px' width='160px'>Adopt & Donate</PrimaryBtn>
             {/* Hamburger Icon */}
             <div
               className={styles.hamburger}

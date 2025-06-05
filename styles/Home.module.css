@@ -1,3 +1,33 @@
 .container {
    height: 200vh;
 }
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.543), rgba(0,0,0,0.5)),
+    url('/images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+@media (max-width: 1072px) {
+  .hero {
+    height: 150vh;
+      background-position: top center;
+    background-size: cover;
+    text-align: center;
+  }
+
+}
+@media (max-width: 751px) {
+  .hero {
+    height: 200vh;
+      background-position: top center;
+    background-size: cover;
+    text-align: center;
+  }
+
+}

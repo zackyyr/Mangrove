@@ -59,8 +59,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+          <div className={styles.hero}>
             <Navbar />
             <Hero />
+          </div>
+
             <About />
             <Team />
             <Explore />

@@ -17,11 +17,12 @@
 .navbar {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 30px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+   background: transparent; /* transparan supaya background hero kelihatan */
 }
 
 .logo h3 {
@@ -37,16 +38,16 @@
   margin: 0;
   padding: 0;
 }
-
 .links li a {
   text-decoration: none;
-  color: black;
-  font-weight: 500;
+  color: white; /* warna putih desktop */
+  font-weight: 700;
   transition: color 0.2s ease;
+  font-size: 17px;
 }
 
 .links li a:hover {
-  color: #1D5C63;
+  color: #FAEC6B;
 }
 .cta { 
     display: flex;
@@ -57,28 +58,23 @@
 .hamburger { 
     display: none;
     cursor: pointer;
-    color: white;
-}
-.hamburger i { 
+  }
+  .hamburger i { 
     font-size: 20px;
+    color: white;
 }
 
 /* Warna default link */
 .links li a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 /* Hover default */
 .links li a:hover {
-  color: #1D5C63;
-}
-
-/* Saat sticky navbar aktif */
-.stickyNavbar .links li a {
-  color: white;
+  color: #FAEC6B;
 }
 
 .stickyNavbar .links li a:hover {
@@ -87,34 +83,44 @@
 
 
 @media (max-width: 954px) {
+  .hamburger { 
+      display: flex;
+  } 
     .navbar { 
         padding: 20px 60px;
         z-index: 5;
     }
-    .hamburger { 
-        display: flex;
-    } 
-    .links ul { 
-        display: none;
-        z-index: 5;
-        flex-direction: column;
-        position: absolute;
-        right: 7%;
-        top: 80%;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
-        text-align: center;
-        padding: 30px 50px;
-        gap: 30px;
-        border-radius: 10px;
-        background-color: #fff;
-    }
-  .stickyNavbar .links li a {
-    color: black !important; /* 🚨 override pakai !important agar menang dari .stickyNavbar */
-    font-weight: 500;
-    font-size: 18px;
+     .links ul { 
+    display: none;
+    z-index: 5;
+    flex-direction: column;
+    position: absolute;
+    right: 7%;
+    top: 80%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
+    text-align: center;
+    padding: 30px 50px;
+    gap: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .links.showMenu ul {
+    display: flex;
+  }
+
+  /* WARNA LINK MOBILE DEFAULT HITAM */
+  .links.showMenu ul li a {
+    color: black !important;
+  }
+
+  /* hover mobile */
+  .links.showMenu ul li a:hover {
+    color: #FAEC6B;
   }
   .links.showMenu ul {
     display: flex;
+
   }
   .cta { 
     font-size: 10px;
