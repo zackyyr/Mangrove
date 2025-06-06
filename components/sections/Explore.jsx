@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import styles from '@/styles/sections/Explore.module.css'
 import PrimaryBtn from '../PrimaryBtn'
 import NavBtn from '../NavBtn'
@@ -35,15 +36,30 @@ const exploreData = [
   }
 ]
 
-
-
 const Explore = () => {
   const [selected, setSelected] = useState(0)
+
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
+  }
+
+  const imageFadeIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut" } }
+  }
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.header}>
+        <motion.div 
+          className={styles.header}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
           <div className={styles.heading}>
             A One-Stop Platform to Learn, Contribute, and Explore Indonesia’s <span className={styles.greens}>Mangrove System.</span>
           </div>
@@ -52,35 +68,48 @@ const Explore = () => {
             <p>From interactive maps and virtual tours to tree adoption and eco-educational tourism—discover how you can learn, contribute, and experience the mangrove ecosystem firsthand. Join our mission to protect, restore, and celebrate our coastal guardians.</p>
             <PrimaryBtn showArrow={true} width=''>Book Your Tour</PrimaryBtn>
           </div>
-        </div>
+        </motion.div>
 
         <div className={styles.explores}>
           <div className={styles.exploreNav}>
             {exploreData.map((item, index) => (
-            <NavBtn 
-              key={index}
-              label={item.label}
-              icon={item.icon}
-              isActive={selected === index}
-              onClick={() => setSelected(index)}
-            />
-          ))}
-
+              <NavBtn 
+                key={index}
+                label={item.label}
+                icon={item.icon}
+                isActive={selected === index}
+                onClick={() => setSelected(index)}
+              />
+            ))}
           </div>
 
-          <div className={styles.exploreDesc}>
-            <Image 
-              src={exploreData[selected].image} 
-              alt={exploreData[selected].heading}
-              width={400}
-              height={300}
-              className={styles.exploreImage}
-            />
+          <motion.div 
+            className={styles.exploreDesc}
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            key={selected} // to re-trigger animation on change
+          >
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={imageFadeIn}
+              className={styles.imageWrapper}
+            >
+              <Image 
+                src={exploreData[selected].image} 
+                alt={exploreData[selected].heading}
+                width={400}
+                height={300}
+                className={styles.exploreImage}
+              />
+            </motion.div>
+
             <div className={styles.textContent}>
               <h3>{exploreData[selected].heading}</h3>
               <p>{exploreData[selected].description}</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
