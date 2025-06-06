@@ -1,0 +1,122 @@
+/* Default desktop */
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 400px;
+  height: auto;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text {
+  padding: 1.2rem 0;
+  text-align: left;
+}
+
+.text h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.5rem;
+}
+
+.text span {
+  font-size: 0.95rem;
+  color: #7c7c7c;
+  display: block;
+  margin: 1em 0;
+  font-weight: 500;
+}
+
+.text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet dan layar medium ke bawah */
+@media (max-width: 1024px) {
+  .container {
+    width: 320px;
+  }
+
+  .image {
+    width: 320px;
+    height: 320px;
+  }
+
+  .text h3 {
+    font-size: 1.3rem;
+  }
+
+  .text span {
+    font-size: 0.9rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile landscape dan tablet kecil */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .text h3 {
+    font-size: 1.2rem;
+  }
+
+  .text span {
+    font-size: 0.85rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .image {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .text h3 {
+    font-size: 1.1rem;
+  }
+
+  .text span {
+    font-size: 0.8rem;
+  }
+
+  .text p {
+    font-size: 0.85rem;
+  }
+}

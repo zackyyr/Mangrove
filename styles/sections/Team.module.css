@@ -1,0 +1,81 @@
+/* Default desktop already kamu punya */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5em;
+  width: 100%;
+  gap: 3em;
+  padding: 0.5% 6%;
+}
+
+.header { 
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.header h1 { 
+  margin-bottom: 10px;
+  font-size:35px;
+}
+.header p { 
+    line-height: 1.5;
+    font-size: 18px;
+}
+.header span { 
+    color: #025043;
+    font-weight: 700;
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.cards > * {
+  flex: 1;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1% 4%;
+  }
+
+  .cards {
+    gap: 0.8em;
+  }
+}
+
+/* Mobile landscape and smaller tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .cards > * {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+/* Mobile portrait (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    margin-top: 3em;
+    padding: 1% 2%;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .cards {
+    gap: 1.5em;
+  }
+}

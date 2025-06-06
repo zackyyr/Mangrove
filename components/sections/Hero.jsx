@@ -38,10 +38,10 @@ const hero = () => {
     >
     <motion.div className={styles.header} initial="hidden" animate="visible" variants={containerVariants}>
       <motion.h1 variants={blurFadeIn}>
-        Confidently Connecting Families with Nature Through Meaningful Experiences.
+        Connecting Families with Nature Through Meaningful Experiences.
       </motion.h1>
       <motion.p variants={fadeUp}>
-        Inspiring all generations to explore and protect nature through engaging activities and community-driven programs that build lifelong family bonds with the environment.
+        MangroveCoastGuard, is a digital conservation platform connecting science, coastal communities, and global action to protect mangrove forests—the living roots of our coastlines
       </motion.p>
     </motion.div>
 

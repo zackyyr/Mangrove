@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 40px;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 /* Membuat section contacts lebih lebar */

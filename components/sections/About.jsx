@@ -11,7 +11,7 @@ const About = () => {
         <div className={styles.heading}>
           <div className={styles.taglines}>
             <i className="ri-bard-fill"></i>
-            <p>Leading Families Toward a Greener Tomorrow</p>
+            <p>About the initiative</p>
           </div>
 
           <motion.h2
@@ -19,41 +19,42 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Discover the story, values, and dedicated team behind our mission to connect generations through nature-driven experiences.
+            Powered by Universitas Mataram and Archipelagic, this platform unites scientists, communities, and youth in a digital ecosystem to:
           </motion.h2>
         </div>
 
         <div className={styles.cta}>
-          <PrimaryBtn showArrow={true}>Discover More</PrimaryBtn>
+          <PrimaryBtn showArrow={true}>Learn More</PrimaryBtn>
         </div>
       </div>
 
       <div className={styles.cards}>
-        <Card
-          className={styles.card}
-          iconClass="ri-tree-line"
-          heading="Our Background"
-          text="Learn about the roots of our initiative and how our commitment to family-nature bonding has grown into a movement."
-        />
-        <Card
-          className={styles.card}
-          iconClass="ri-lightbulb-flash-line"
-          heading="Vision & Mission"
-          text="We aim to inspire every generation to protect nature by creating meaningful and accessible family-centered experiences."
-        />
-        <Card
-          className={styles.card}
-          iconClass="ri-service-fill"
-          heading="Partner Institutions"
-          text="In proud collaboration with Unram, ARC, and community groups, we build stronger bonds between people and the planet."
-        />
-        <Card
-          className={styles.card}
-          iconClass="ri-group-line"
-          heading="Team & Advisory Board"
-          text="Meet the passionate individuals and expert advisors guiding our programs, grounded in care, science, and sustainability."
-        />
-      </div>
+  <Card
+    className={styles.card}
+    iconClass="ri-map-pin-line"
+    heading="Spatial Mangrove Data"
+    text="Provide GIS-based spatial data on mangrove distribution, degradation, and restoration."
+  />
+  <Card
+    className={styles.card}
+    iconClass="ri-hand-heart-line"
+    heading="Transparent Donations"
+    text="Channel transparent, location-specific donations and mangrove adoptions."
+  />
+  <Card
+    className={styles.card}
+    iconClass="ri-earth-line"
+    heading="Eco-Educational Tourism"
+    text="Enable eco-educational tourism guided by trained local groups (Pokdarwis)."
+  />
+  <Card
+    className={styles.card}
+    iconClass="ri-shield-user-line"
+    heading="Local Heroes"
+    text="Celebrate and support local heroes who protect Indonesia’s coastlines."
+  />
+</div>
+
     </div>
   )
 }
