@@ -6,17 +6,22 @@ const PrimaryBtn = ({
   children = "Click Me",
   type = "default",
   fontSize = "16px",
-  width = "200px", // tambahkan width default
+  width = "200px",
   className = "",
   onClick,
   showArrow = false,
+  hoverBg = "", // ✅ tambahan untuk hover background
 }) => {
   const buttonClass = clsx(styles.primaryBtn, styles[type], className);
 
   return (
     <button
       className={buttonClass}
-      style={{ fontSize, width }}
+      style={{
+        fontSize,
+        width,
+        ...(hoverBg && { "--hover-bg": hoverBg }) // ✅ inject CSS variable
+      }}
       onClick={onClick}
     >
       {children}
@@ -28,6 +33,5 @@ const PrimaryBtn = ({
     </button>
   );
 };
-
 
 export default PrimaryBtn;

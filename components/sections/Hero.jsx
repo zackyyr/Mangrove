@@ -36,14 +36,14 @@ const hero = () => {
       initial="hidden"
       animate="visible"
     >
-<motion.div className={styles.header} initial="hidden" animate="visible" variants={containerVariants}>
-  <motion.h1 variants={blurFadeIn}>
-    Confidently Connecting Families with Nature Through Meaningful Experiences.
-  </motion.h1>
-  <motion.p variants={fadeUp}>
-    Inspiring all generations to explore and protect nature through engaging activities and community-driven programs that build lifelong family bonds with the environment.
-  </motion.p>
-</motion.div>
+    <motion.div className={styles.header} initial="hidden" animate="visible" variants={containerVariants}>
+      <motion.h1 variants={blurFadeIn}>
+        Confidently Connecting Families with Nature Through Meaningful Experiences.
+      </motion.h1>
+      <motion.p variants={fadeUp}>
+        Inspiring all generations to explore and protect nature through engaging activities and community-driven programs that build lifelong family bonds with the environment.
+      </motion.p>
+    </motion.div>
 
 
       <motion.div className={styles.ctas} variants={fadeUp}>
